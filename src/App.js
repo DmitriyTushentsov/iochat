@@ -1,28 +1,29 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import RoomsList from './components/roomsList/roomsList.js';
+import OnlineUserList from './components/onlineUserList/onlineUserList.js';
+import Header from './components/header/header.js';
+import LoginPage from './components/loginPage/loginPage.js';
+import {Route, BrowserRouter, Redirect} from 'react-router-dom';
+import ChatRoute from './components/chatRoute/chatRoute.js';
 
-class App extends Component {
-  render() {
+const App = (props) => {
+
+    if (!props.state.user) return <LoginPage state={props.state} dispatch={props.dispatch}/>;
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <BrowserRouter>
+            <div className='app-wrapper'>
+                <Header/>
+                <RoomsList state={props.state} dispatch={props.dispatch} socket={props.socket}/>
+                <Route exact path="/rooms/:name"
+                       render={({match}) => <ChatRoute name={match.params.name} dispatch={props.dispatch}
+                                                       state={props.state}/>}/>
+                <OnlineUserList state={props.state} socket={props.socket}/>
+            </div>
+        </BrowserRouter>
     );
-  }
-}
+};
 
 export default App;
+

@@ -1,0 +1,13 @@
+.header {
+    grid-area: head;
+    background-color: darkcyan;
+    border-bottom: solid 1px black;
+    color: white;
+}
+h1 {
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 50px;
+
+
+}

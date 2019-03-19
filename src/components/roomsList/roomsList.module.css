@@ -1,0 +1,46 @@
+.rooms {
+    grid-area: rl;
+    border-right: solid 1px black;
+}
+
+.element {
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    background-color: #CCCCCC;
+}
+
+.active {
+    background-color: #999999;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    background-color: darkcyan;
+    color: white;
+}
+
+.caption {
+    padding-left: 10px;
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+h2 {
+    margin: 0;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+
+}

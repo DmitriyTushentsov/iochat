@@ -1,0 +1,20 @@
+.users {
+    grid-area: oul;
+    border-left: solid 1px black;
+}
+
+.users li {
+    padding: 5px;
+    list-style-type: none;
+}
+
+.caption {
+    background-color: #CCCCCC;
+}
+
+h2 {
+    margin: 0;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}

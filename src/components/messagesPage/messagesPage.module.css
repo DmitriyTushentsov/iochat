@@ -1,0 +1,40 @@
+.messages {
+    grid-area: mp;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.inputForm {
+    width: 100%;
+}
+
+.messages input[type="submit"] {
+    padding: 16px;
+    margin: 5px;
+    width: 15%;
+}
+
+textarea {
+    vertical-align: bottom;
+    margin: 5px;
+    width: 81%;
+}
+
+.message {
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+}
+
+.date {
+    font-weight: bold;
+}
+
+.user {
+    font-weight: bold;
+}
+
+.text {
+
+}
