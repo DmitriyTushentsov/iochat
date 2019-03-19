@@ -4,7 +4,6 @@ import {NavLink} from "react-router-dom";
 
 
 const RoomsList = (props) => {
-
     let mappedRooms = props.state.rooms.map(item =>
         <li className={s.element} key={item.id}>
             <NavLink to={`/rooms/${item.name.toLowerCase()}`} activeClassName={s.active}>{item.name}</NavLink>
@@ -12,10 +11,9 @@ const RoomsList = (props) => {
     );
 
     let addRoom = function () {
-
         let room = prompt("Enter room name", "");
         if (!room) return null;
-        let roomName = room.charAt(0).toUpperCase() + room.slice(1).toLowerCase();
+        let roomName = room.charAt(0).toUpperCase() + room.slice(1).toLowerCase(); //change name of the room to format "Xxxxxxxx"
         if (props.state.globalRooms.find(item => item.roomName === roomName) !== undefined) {
             alert("This room already exist!");
         } else {

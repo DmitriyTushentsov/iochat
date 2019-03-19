@@ -11,7 +11,7 @@ const chatRoute = (props) => {
     }
 
     if (props.state.globalRooms.find(item => item.roomName === roomName) === undefined) {
-        alert("Такой группы не существует!");
+        alert("This room does not exist!");
         return (
             <Redirect to='/rooms/main'/>
         );
@@ -20,13 +20,11 @@ const chatRoute = (props) => {
     if (props.state.rooms.find(item => item.name === roomName) === undefined) {
         props.dispatch({type: "ADD_ROOM", roomName: roomName});
         return (
-
             <MessagesPage dispatch={props.dispatch} state={props.state} roomName={roomName}/>
         );
     }
 
     return (
-
         <MessagesPage dispatch={props.dispatch} state={props.state} roomName={roomName}/>
     );
 };

@@ -8,7 +8,7 @@
     margin-top: 5px;
 }
 
-a {
+.element a {
     padding: 10px;
     text-decoration: none;
     color: black;
@@ -16,7 +16,7 @@ a {
     background-color: #CCCCCC;
 }
 
-.active {
+.element .active {
     background-color: #999999;
 }
 
@@ -42,5 +42,4 @@ h2 {
     padding: 5px;
     font-size: 15px;
     font-weight: bold;
-
 }
